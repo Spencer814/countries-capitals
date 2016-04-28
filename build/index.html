@@ -8,11 +8,11 @@
 <body ng-class="{loading: isLoading}">
     <nav class="view-nav">
         <a ng-href="#/">Home</a>
-        <a ng-href="#/countries">Browse Countries</a>
+        <a ng-href="#/countries/Browse">Browse Countries</a>
     </nav>
 
     <div class="animate-view-container">
-        <div class="animate-view" ng-view></div>
+        <div ng-view class="animate-view"></div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
