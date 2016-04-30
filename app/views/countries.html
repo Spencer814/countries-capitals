@@ -1,2 +1,26 @@
-<h1>Welcome to {{ city }}</h1>
-<p>Nice that you came to visit...</p>
+<div class="countries-content">
+	<h2 class="countries-title">Click on a country to learn more!</h2>
+	<table class="ng-scope">
+		<thead>
+			<tr class="header-row" >
+				<th>Name</th>
+				<th>Country Code</th>
+				<th>Capital</th>
+				<th>Area in km<sup>2</sup></th>
+				<th>Population</th>
+				<th>Continent</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="country-row" ng-repeat="country in countries">
+				<td><a ng-click="changeLocation(country.countryCode)" class="country-name">{{country.countryName}}</a></td>
+				<td>{{country.countryCode}}</td>
+				<td>{{country.capital}}</td>
+				<td>{{country.areaInSqKm | number}}</td>
+				<td>{{country.population | number}}</td>
+				<td>{{country.continent}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<a class="button" href="#/">Home</a>

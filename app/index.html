@@ -2,22 +2,26 @@
 <html lang="en" ng-app="CCApp">
 <head>
     <meta charset="UTF-8">
-    <title>Countries & Capitals</title>
-    <link rel="stylesheet" type="text/css" href="styles/cc-app.css">
+    <title>Countries and Capitals</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+	<link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Karla:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="styles/cc-app.css">
 </head>
 <body ng-class="{loading: isLoading}">
-    <nav class="view-nav">
-        <a ng-href="#/">Home</a>
-        <a ng-href="#/countries">Browse Countries</a>
-    </nav>
+    <header class="nav-top">
+        <h1>Countries and Capitals</h1>
+    </header>
 
-    <div class="animate-view-container">
+    <div class="animate-view-container animate-view animate-out">
         <div class="animate-view" ng-view></div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="scripts/cc-app-library.js"></script>
     <script src="scripts/cc-app.js"></script>
 </body>
 </html>
