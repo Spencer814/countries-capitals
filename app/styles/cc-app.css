@@ -29,7 +29,7 @@ html {
 	top: 0;
 	z-index: 1000;
 	background: #ffffff no-repeat center center;
-	background-image: url('../loading-animation.gif');
+	background-image: url('../images/loading-animation.gif');
 }
 .animate-view-container {
 	position: relative;
