@@ -1,37 +1,55 @@
-<div class="country-content">
-	<div class="countryImgFlag">
-		<img class="country-flag" width="250px" src="http://www.geonames.org/flags/x/{{country.countryCode | lowercase}}.gif">
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<a href="https://en.wikipedia.org/wiki/{{country.countryName}}" target="_blank">
+			<h2>{{country.countryName}}</h2>
+		</a>
 	</div>
-	<h2>{{country.countryName}}</h2>
-	<div>
-		<label>Population of Country:</label>
-		<span> {{country.population | number: 0}}</span>
-	</div>
-	<div>
-		<label>Area:</label>
-		<span> {{country.areaInSqKm | number: 0}} sq km</span>
-	</div>
-	<div>
-		<label>Capital:</label>
-		<span> <a href="https://en.wikipedia.org/wiki/{{country.capital}}">{{country.capital}}</a></span>
-	</div>
-	<div>
-		<label>Population of Capital:</label>
-		<span> {{((capital.population | number: 0) || 'Loading population data' )}}</span>
-	</div>
-	<div>
-		<label>Timezone:</label>
-		<span>Display timeszones for country, use a link in the angular script</span>
-	</div>
-	<div class="neighbors">
-		<div class="neighbor">
-			<label>{{neighbors.length}} Neighbors:</label>
-			<span ng-repeat="neighbor in neighbors">
-				<a href="#/countries/{{neighbor.countryCode}}" class="neighbor-names">{{neighbor.countryName}}</a>
-			</span>
+	<div class="panel-body text-center">
+		<div class="thumbnail">
+			<a href="https://en.wikipedia.org/wiki/{{country.countryName}}" target="_blank">
+				<img class="flag img-responsive" width="304" src="http://www.geonames.org/flags/x/{{country.countryCode | lowercase}}.gif">
+			</a>
 		</div>
-		<img class="country-image" src="http://www.geonames.org/img/country/250/{{country.countryCode}}.png">
+		<table class="table">
+			<tr>
+				<td class="bold">Population of Country:</td>
+				<td>{{country.population | number: 0}}</td>
+			</tr>
+			<tr>
+				<td class="bold">Area:</td>
+				<td>{{country.areaInSqKm | number: 0}} km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td class="bold">Capital:</td>
+				<td ng-if="country.capital"><a href="https://en.wikipedia.org/wiki/{{country.capital}}" target="_blank">{{country.capital}}</a></td>
+				<td ng-if="!country.capital">N/A</td>
+			</tr>
+			<tr>
+				<td class="bold">Population of Capital:</td>
+				<td>{{capital.population | number: 0}}</td>
+			</tr>
+			<tr>
+				<td class="bold" ng-if="neighbors.length > '1'">{{neighbors.length}} Neighbors:</td>
+				<td class="bold" ng-if="neighbors.length == '1'">{{neighbors.length}} Neighbor:</td>
+				<td class="bold" ng-if="neighbors.length == '0'">No Neighbors</td>
+				<td>
+					<ul>
+						<li ng-repeat="neighbor in neighbors" ng-if="neighbors.length > '0'">
+							<a href="#/countries/{{neighbor.countryCode}}">{{neighbor.countryName}}</a>
+						</li>
+						<li ng-if="neighbors.length == '0'" disabled>N/A</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<div class="thumbnail">
+			<a href="https://en.wikipedia.org/wiki/{{country.countryName}}" target="_blank">
+				<img class="image img-responsive" src="http://www.geonames.org/img/country/250/{{country.countryCode}}.png">
+			</a>
+		</div>
 	</div>
-	<a class="button" href="#/">Home</a>
-	<a class="button" href="#/countries">Browse Countries</a>
+	<div class="panel-footer buttons">
+		<button class="btn btn-info"><a class="button" href="#/">Home</a></button>
+		<button class="btn btn-info"><a class="button" href="#/countries">Browse Countries</a></button>
+	</div>
 </div>

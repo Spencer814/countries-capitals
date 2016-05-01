@@ -2,26 +2,57 @@
 <html lang="en" ng-app="CCApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Countries and Capitals</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Pacifico|Karla:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif">
+    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/cc-app.css">
+    <!-- endbuild -->
 </head>
 <body ng-class="{loading: isLoading}">
-    <header class="nav-top">
-        <h1>Countries and Capitals</h1>
-    </header>
+    <div class="panel panel-info index">
+        <div class="panel-heading main"><h1>Countries and Capitals</h1></div>
 
-    <div class="animate-view-container animate-view animate-out">
-        <div class="animate-view" ng-view></div>
+        <div class="panel-body text-center animate-view-container animate-view animate-out">
+            <div class="animate-view" ng-view></div>
+        </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <script src="../bower_components/bootstrap/js/affix.js"></script>
+    <script src="../bower_components/bootstrap/js/alert.js"></script>
+    <script src="../bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="../bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="../bower_components/bootstrap/js/modal.js"></script>
+    <script src="../bower_components/bootstrap/js/transition.js"></script>
+    <script src="../bower_components/bootstrap/js/button.js"></script>
+    <script src="../bower_components/bootstrap/js/popover.js"></script>
+    <script src="../bower_components/bootstrap/js/carousel.js"></script>
+    <script src="../bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="../bower_components/bootstrap/js/collapse.js"></script>
+    <script src="../bower_components/bootstrap/js/tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
     <script src="scripts/cc-app-library.js"></script>
     <script src="scripts/cc-app.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

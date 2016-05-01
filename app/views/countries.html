@@ -1,26 +1,31 @@
-<div class="countries-content">
-	<h2 class="countries-title">Click on a country to learn more!</h2>
-	<table class="ng-scope">
-		<thead>
-			<tr class="header-row" >
-				<th>Name</th>
-				<th>Country Code</th>
-				<th>Capital</th>
-				<th>Area in km<sup>2</sup></th>
-				<th>Population</th>
-				<th>Continent</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class="country-row" ng-repeat="country in countries">
-				<td><a ng-click="changeLocation(country.countryCode)" class="country-name">{{country.countryName}}</a></td>
-				<td>{{country.countryCode}}</td>
-				<td>{{country.capital}}</td>
-				<td>{{country.areaInSqKm | number}}</td>
-				<td>{{country.population | number}}</td>
-				<td>{{country.continent}}</td>
-			</tr>
-		</tbody>
-	</table>
+<div class="panel panel-primary">
+	<div class="panel-heading"><h2>Select a country</h2></div>
+	<div class="panel-body text-center">
+		<table class="table">
+			<thead>
+				<tr class="row alert alert-info">
+					<th>Name</th>
+					<th>Country Code</th>
+					<th>Capital</th>
+					<th>Area in km<sup>2</sup></th>
+					<th>Population</th>
+					<th>Continent</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="row" ng-repeat="country in countries">
+					<td><a ng-click="changeLocation(country.countryCode)">{{country.countryName}}</a></td>
+					<td><a ng-click="changeLocation(country.countryCode)">{{country.countryCode}}</a></td>
+					<td ng-if="!country.capital">N/A</td>
+					<td ng-if="country.capital">{{country.capital}}</td>
+					<td>{{country.areaInSqKm | number}}</td>
+					<td>{{country.population | number}}</td>
+					<td><a href="https://en.wikipedia.org/wiki/{{country.continentName}}" target="_blank">{{country.continentName}}</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="panel-footer buttons">
+		<button class="btn btn-info"><a class="button" href="#/">Home</a></button>
+	</div>
 </div>
-<a class="button" href="#/">Home</a>

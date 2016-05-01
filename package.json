@@ -2,7 +2,7 @@
   "name": "countries-capitals",
   "version": "1.0.0",
   "description": "App that allows users to search and visualize data about countries and capital cities",
-  "main": "cc-app.js",
+  "main": "app/scripts/cc-app.js",
   "config": {
     "bower_directory": "bower_components"
   },

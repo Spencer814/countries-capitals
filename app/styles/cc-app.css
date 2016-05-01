@@ -1,36 +1,164 @@
-body, html {
-  margin:0;
-  padding:0;
-  position:relative;
-  height:100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+	text-align: center;
+	background: #eaf5fb;
+	font-family: "Bree Serif", serif;
+}
+.index {
+	margin: 1.25em 1em 1em 1em;
+}
+.panel-heading.main {
+	background: #5bc0de;
+	border: 1px solid #337ab7;
+	box-shadow: 0 10px 30px #337ab7;
 }
 .loading {
-	position:relative;
-	height:100%;
+	position: relative;
+	height: 100%;
 }
 .loading:before {
-	position:absolute;
-	content:"";
-	left:0;
-	bottom:0;
-	right:0;
-	top:0;
-	z-index:1000;
-	background:rgba(255,255,255,0.9) no-repeat center center;
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	background: #ffffff no-repeat center center;
 	background-image: url('../loading-animation.gif');
 }
-.animate-view-container { position:relative; min-height: 100%;}
-.animate-view.ng-enter,
-.animate-view.ng-leave {
-		transition:1s linear all;
-		position:absolute;
-		top:0;
-		left:0;
-		right:0;
-		bottom:0;
-		background:#eee;
+.animate-view-container {
+	position: relative;
+	min-height: 100%;
 }
-.animate-view.ng-enter { opacity:0; z-index:100; }
-.animate-view.ng-enter.ng-enter-active { opacity:1; }
-.animate-view.ng-leave { opacity:1; z-index:99; }
-.animate-view.ng-leave.ng-leave-active { opacity:0; }
+.animate-view .ng-enter,
+.animate-view .ng-leave {
+	transition: 1s linear all;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #eeeeee;
+}
+.animate-view .ng-enter {
+	opacity: 0;
+	z-index: 100;
+}
+.animate-view .ng-enter .ng-enter-active {
+	opacity: 1;
+}
+.animate-view .ng-leave {
+	opacity: 1;
+	z-index: 99;
+}
+.animate-view .ng-leave .ng-leave-active {
+	opacity: 0;
+}
+.flag,
+.image {
+	border: 1px solid #88b5dd;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px #88b5dd;
+}
+/*.image {
+	border: 1px solid #88b5dd;
+	box-shadow: 0 10px 30px #88b5dd;
+	border-radius: 15px;
+}*/
+.table {
+	border-bottom: 0px !important;
+	margin: 0 auto;
+	width: 0%;
+}
+.table th,
+.table td {
+	border: 1px !important;
+}
+.bold {
+	font-weight: bold;
+}
+th,
+td {
+	text-align: center;
+	padding: 0.25em 0.5em;
+	vertical-align: middle !important;
+}
+.panel-heading {
+	border-radius: 8px;
+	box-shadow: 0 10px 30px #337ab7;
+}
+.panel-body,
+.thumbnail {
+	background: transparent;
+}
+.panel {
+	background: #eaf5fb;
+}
+.panel-info {
+	background: #eaf5fb;
+}
+.panel-footer {
+	margin-top: 1em;
+	border: 1px solid #e6e6e6;
+	border-radius: 8px;
+	box-shadow: 0 10px 30px #337ab7;
+}
+.btn {
+	margin: 0.5em;
+	border: 1px solid #4c91cd;
+	box-shadow: 0 10px 30px #88b5dd;
+}
+.btn-info:hover {
+	border: 1px solid #337ab7;
+	box-shadow: 0 10px 30px #337ab7;
+}
+.panel,
+.thumbnail {
+	border: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+h1 {
+	color: #ffffff;
+	text-shadow: 1px 1px 1px transparent;
+}
+h2,
+.btn > a {
+	color: #ffffff;
+	text-shadow: 1px 1px 1px transparent;
+}
+h2 > a {
+	color: #ffffff;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+th {
+	color: white;
+	background: #5bc0de;
+	border: 1px solid #337ab7;
+}
+tr td:first-child,
+tr th:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+tr td:last-child,
+tr th:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+a:hover {
+	cursor: pointer;
+}

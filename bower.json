@@ -5,7 +5,7 @@
     "Andre Newman <andre.d.newman@gmail.com>"
   ],
   "description": "App that allows users to search and visualize data about countries and capital cities",
-  "main": "cc-app.js",
+  "main": "app/scripts/cc-app.js",
   "license": "MIT",
   "private": true,
   "ignore": [
