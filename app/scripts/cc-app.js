@@ -54,10 +54,6 @@ function($scope, $rootScope, $location, countries) {
 	$scope.order = 'countryName';
 	$scope.reverseSort = false;
 	$rootScope.isLoading = false;
-	$scope.changeOrder = function(order) {
-		$scope.reverseSort = (order === $scope.order) ? !$scope.reverseSort : false;
-		$scope.order = order || 'countryName';
-	};
 	$scope.changeLocation = function(location) {
 		$location.path('/countries/'+location);
 	};

@@ -7,7 +7,7 @@
     "bower_directory": "bower_components"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
     "bower-install": "bower install"
   },
   "repository": {
@@ -42,9 +42,17 @@
     "gulp-sass": "^2.3.1",
     "gulp-uglify": "^0.3.2",
     "gulp-usemin": "^0.3.22",
+    "jasmine-core": "^2.4.1",
     "jshint": "^2.9.2",
-    "sjcountries": "^1.4.0",
-    "vinyl-buffer": "^1.0.0",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-ng-html2js-preprocessor": "^1.0.0",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-safari-launcher": "^0.1.1",
+    "phantomjs-prebuilt": "^2.1.7",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {}
