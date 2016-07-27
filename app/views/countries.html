@@ -1,0 +1,52 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Select a country</h2>
+  </div>
+  <div class="panel-body panel-thead">
+    <div class="table-responsive table-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="row alert info">
+            <th id="th1" class="col-md-4">Name</th>
+            <th id="th2" class="col-md-1">Country Code</th>
+            <th id="th3" class="col-md-2">Capital</th>
+            <th id="th4" class="col-md-1">Area in km<sup>2</sup></th>
+            <th id="th5" class="col-md-2">Population</th>
+            <th id="th6" class="col-md-2">Continent</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+  <div class="panel-body panel-tbody">
+    <div class="table-responsive table-body">
+      <table class="table table-hover">
+        <tbody>
+          <tr class="row alert info" ng-repeat="country in countries">
+            <td headers="th1" class="text col-md-4">
+              <a ng-click="changeLocation(country.countryCode)">{{country.countryName}}</a>
+            </td>
+            <td headers="th2" class="text col-md-1">
+              <a ng-click="changeLocation(country.countryCode)">{{country.countryCode}}</a>
+            </td>
+            <td headers="th3" class="text col-md-2">
+              <span ng-if="!country.capital">N/A</span>
+              <span ng-if="country.capital">{{country.capital}}</span>
+            </td>
+            <td headers="th4" class="text col-md-1">{{country.areaInSqKm | number}}</td>
+            <td headers="th5" class="text col-md-2">{{country.population | number}}</td>
+            <td headers="th6" class="text col-md-2">
+              <a href="https://en.wikipedia.org/wiki/{{country.continentName}}" target="_blank">{{country.continentName}}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="panel-footer buttons">
+    <button class="btn btn-info">
+      <a class="button" href="#/">Home</a>
+    </button>
+  </div>
+</div>

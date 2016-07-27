@@ -1,0 +1,174 @@
+body,
+html {
+  background: #eaf5fb;
+  font-family: "Arimo", sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+.flag,
+.image {
+  border-radius: 4px;
+  border: 1px solid #88b5dd;
+  box-shadow: 0 10px 30px #88b5dd;
+}
+.table-box {
+  border-radius: 4px;
+  border: 1px solid #88b5dd;
+  box-shadow: 0 10px 30px #88b5dd;
+  overflow: hidden;
+}
+.bold {
+  font-weight: bold;
+  text-align: right;
+}
+.index {
+  margin: 1.25em 1em 1em 1em;
+}
+.thumbnail {
+  background: transparent;
+  border: none;
+}
+.panel {
+  background: #eaf5fb;
+  border: none;
+}
+.panel-info {
+  background: #eaf5fb;
+}
+.panel-heading {
+  border-radius: 4px;
+  box-shadow: 0 10px 30px #337ab7;
+}
+.panel-heading.main {
+  background: #5bc0de;
+  border: 1px solid #337ab7;
+  box-shadow: 0 10px 30px #337ab7;
+}
+.panel-body {
+  background: transparent;
+  overflow-x: hidden;
+  padding: 15px 15px 0 15px;
+}
+.panel-footer {
+  border-radius: 4px;
+  border: 1px solid #88b5dd;
+  box-shadow: 0 10px 30px #337ab7;
+}
+.btn {
+  border: 1px solid #4c91cd;
+  box-shadow: 0 10px 30px #88b5dd;
+  margin: 0.5em;
+}
+.btn-info:hover {
+  border: 1px solid #337ab7;
+  box-shadow: 0 10px 30px #337ab7;
+}
+.row {
+  margin: 0 auto;
+}
+.body {
+  margin: 1em;
+  padding: 15px;
+}
+.table-body {
+  margin: 0 2em;
+  padding: 0 15px;
+}
+td {
+  border: 1px solid #d9edf7;
+}
+.table-hover > tbody > tr.info:hover > td {
+  border: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+h1,
+h2,
+h2 > a,
+.btn > a {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px transparent;
+}
+a:hover {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  display: inline-block;
+  word-wrap: break-word;
+}
+.alert {
+  margin: 0 auto;
+  padding: 15px 0 0 0;
+}
+.column {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  width: 30%;
+}
+.panel-thead {
+  padding: 15px 0px 0px 0px;
+}
+.panel-tbody {
+  padding: 0px 0px 15px 0px;
+}
+thead,
+tbody,
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+thead {
+  color: #ffffff;
+}
+.table {
+  margin-bottom: 0;
+}
+.table tbody {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 1px solid #88b5dd;
+  box-shadow: 0 10px 30px #88b5dd;
+  display: inline-block;
+  max-height: 375px;
+  overflow-y: auto;
+}
+.table thead {
+  display: table-header-group;
+}
+.table > thead > tr.info > th {
+  background: #5bc0de;
+  overflow: hidden;
+}
+.table > thead > tr.info > th:first-child {
+  border-top-left-radius: 4px;
+}
+.table > thead > tr.info > th:last-child {
+  border-top-right-radius: 4px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  text-align: center;
+  vertical-align: middle;
+}
+tr th:first-child,
+tr td:first-child {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+tr th:last-child,
+tr td:last-child {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
